@@ -1,0 +1,46 @@
+.btn
+  padding: 22px 1rem
+  text: #fff center 20px 1.1 500
+  text-decoration: none
+  font-family: $font
+  border: 1px solid #bfd000
+  outline: 0
+  cursor: pointer
+  border-radius: 5px
+  background-color: $main
+  background-image: linear-gradient(90deg, #45b900, #007c0f)
+  user-select: none
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  max-width: 253px
+  box-shadow: 0 8px 7px rgba(15, 8, 5, 0.3)
+  -webkit-tap-highlight-color: transparent
+  &:hover
+    background-image: none
+    border-color: $main
+  &:active
+    opacity: .9
+    box-shadow: 0 4px 5px rgba(15, 8, 5, 0.3)
+
+  &--action
+    padding: 19px * 14px
+    background-color: #f27262
+    background-image: none
+    text-transform: uppercase
+    border-color: #fff
+    font-size: 22px @xl 30px
+    max-width: 396px
+    &:after
+      content: ""
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAsCAMAAAAtr3oOAAAAzFBMVEX///8AAAD////ydWb0hHb////yc2P0iXz1j4P4ta3////////////////////////zeGnzfG31kob3o5n719L+9/b////////////////////////////////////////0in32l4v2nJH3raP5v7j+8O/////////////////////////////////2oJX3p5383Nj95OH////////////////////////////////////////4rqX6ycP////////////////////ycmICuZyTAAAAQ3RSTlOWADf76nn+5d+/kIRvSx8T+PPdzaqafWZYTUInIg8LBeTY08a5nYd2cUQ9LioI0MqnpJONin5iX1tSMCXFsoFpRzUknlK9dQAAAahJREFUSMeV1elSwjAUhuHvQLEgq+w7qCio4K4s7nL/9yRMSfKNh0J5fzWTZzKlTQOEyv/Uq0/Pmey4J9JrZTPPT9V6LM/C8fYsDVtiCFt62tK8jh3N/vFcAjur/jK/wd5ihpPe6Q3vXkbhx/kNryFSmYBfIWLZNe/AVb71CoV+Khik+oWCd1am6byAFy8tg7wLoOJvBrewNVZ8ZEenS5MH+HZQdO96xR/NILV0lR9ocG59D21zWTkikSwuqQtjxrhSi9v08g18mctkOPeNGcHu2pNwfmLMJY7NZTycx+1GOJAfejO1CD+1b3cZmhEe5LvdZMip12TTr6lFm6AUps9oE0gGe57NUcWAoUCaln9s5wP6PsCfRynkVvjz4APpVOskbK+y5l24ilq7OsFJcI3Q9Ys01TTH0hSuO9YlmqiJ4RM+IQdx+wQHcH12LZccqAc/0N49qBafwAtw5+v9cKdOSMclBu7e98rgroU4eUpp5rLYdVZrLrnqdpxuC3HX5HWbrnWEOdfU+tvMaa7/0l7eRHOuwXpOE8S5doKW1lw3GTdGw/lNV3R/WH2UARM6lxEAAAAASUVORK5CYII=")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      margin-left: 25px
+      margin-right: -26px
+      size: 38px @lg 46px 44px
+    &:hover
+      border-color: #ff7968
+      background-color: #ff7968

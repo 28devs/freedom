@@ -1,0 +1,98 @@
+.thanks
+  position: relative
+  padding-top: 370px @md 400px @xl 436px
+  padding-bottom: 239px
+  margin-top: -310px @md -192px
+  overflow: hidden
+
+  &__line-bg
+    margin-bottom: -300px
+    top: 300px
+
+  &__container
+    position: relative
+    z-index: 8
+
+  &__picture
+    padding-bottom: 62.35%
+    background-color: #f3f3f3
+    background-image: svg-load("icons/img.svg")
+    background-size: 60px
+    background-position: center
+    background-repeat: no-repeat
+    margin-bottom: 5px @sm 10px
+    position: relative
+    overflow: hidden
+    &-wrapper
+      max-width: 300px
+      margin: 0 auto
+  &__img
+    display: block
+    height: 100%
+    min-width: 100%
+    @extend .absolute-0
+
+  &__slider
+    margin: 0 -15px @sm 0 auto
+    padding: @lg 0 50px @xl 0
+    max-width: 920px
+
+  &__btn
+    margin: 25px 0 45px @xl 47px 0 52px
+    text-align: center
+
+  &__banner
+    background: #007c0f
+    padding: 20px 25px 28px @lg 33px 39px 30px
+    display: flex
+    align-items: center
+    flex-direction: column @lg row
+    justify-content: space-between
+    text-align: center
+    margin: @lg 0 50px @xl auto
+    max-width: 920px
+    &-text
+      text: 26px #fff @lg 34px @xl 38px
+      text-transform: uppercase
+      margin-bottom: 15px @lg -5px
+      text-align: center
+    &-btn
+      width: 100% @lg 233px @xl 253px
+
+.glide
+  position: static
+  opacity: 0
+  max-height: 400px
+  &--swipeable
+    opacity: 1
+    max-height: unset
+  &__slide
+    opacity: .4 @xs 1
+    transition: opacity .3s ease @xs unset
+    &--active
+      opacity: 1
+  &__arrows
+    transform: translateY(-3px)
+    display: flex
+    pointer-events: none
+    max-width: 370px @xs 96% @sm 650px @md 780px @lg 990px @xl 1150px
+    margin: 0 auto
+    @extend .absolute-0
+  &__btn
+    border: 0
+    background-color: transparent
+    background-image: svg-load("icons/arrow.svg", fill: #fff)
+    background-size: calc(13px + 0.5vw) @lg 22px @xl 25px
+    background-position: center
+    background-repeat: no-repeat
+    width: 37px
+    width: 10vw @sm 35px @lg 60px @xl 64px
+    height: 100%
+    padding: 0
+    pointer-events: all
+    @extend .simple-hover
+  &__prev
+    // transform: none @sm translateX(calc(-100% - 1vw)) @xl translateX(calc(-100% - 40px))
+  &__next
+    margin-left: auto
+    transform: scale(-1)

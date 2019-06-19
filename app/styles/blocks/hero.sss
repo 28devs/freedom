@@ -1,0 +1,57 @@
+.hero
+  // height: auto @xl 875px
+  background-color: #f9f8f2
+  background-image: linear-gradient(15deg, #e4ded0, #f6f4ee)
+  padding-top: 70px @lg 94px
+  padding-bottom: 310px @xl 335px
+  &:before
+    content: ""
+    display: block
+    margin: 0 auto
+    size: 280px @sm 310px
+    background-image: url("../img/hero-bg.png")
+    background-size: contain
+    background-position: top center @xl bottom center
+    background-repeat: no-repeat
+    position: @lg absolute
+    left: 50%
+    top: 102px
+    width: @lg 65%
+    height: @lg 115%
+    max-width: @xl 746px
+    max-height: @xl 760px
+    transform: @lg translateX(-100%) @xl translateX(-105%)
+
+  &__wrapper
+    max-width: 400px @sm 430px @lg 50% @xl 600px
+    margin-left: auto
+    margin-right: auto @lg 0
+
+  &__iframe
+    padding-top: 56.25%
+    position: relative
+    overflow: hidden
+    background: #dcdbd7
+    &-elem
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: 0
+
+  &__hashtag
+    font-size: 25px @sm 35px @lg 41px @xl 53px
+    color: #fff
+    background: $main
+    padding: 4px 12px 0
+    margin: 4px 0 11px
+
+  &__block
+    text: 20px #464646 600 @sm 28px @xl 34px
+    text-align: right
+    text-transform: uppercase
+    background: $main
+    padding: 10px 12px
+    padding-right: @xl 18px

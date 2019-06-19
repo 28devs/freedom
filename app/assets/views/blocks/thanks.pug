@@ -1,0 +1,56 @@
+.thanks
+  .thanks__container.container
+    .title.title--style-white
+      .title__text Спасибо участникам челенжа
+
+  .thanks__container
+    .container
+      .thanks__slider
+        .glide
+          .glide__track(data-glide-el="track")
+            ul.glide__slides
+              each i in [1,2,3,4]
+                li.glide__slide
+                  .thanks__picture-wrapper
+                    .thanks__picture
+                    .thanks__picture
+                      img.thanks__img(src="../img/test-content.jpg" alt="Test")
+                    .thanks__picture
+                li.glide__slide
+                  .thanks__picture-wrapper
+                    .thanks__picture
+                    .thanks__picture
+                    .thanks__picture
+                      img.thanks__img(src="../img/test-content.jpg" alt="Test")
+                li.glide__slide
+                  .thanks__picture-wrapper
+                    .thanks__picture
+                      img.thanks__img(src="../img/test-content.jpg" alt="Test")
+                    .thanks__picture
+                    .thanks__picture
+                li.glide__slide
+                  .thanks__picture-wrapper
+                    .thanks__picture
+                      img.thanks__img(src="../img/test-content.jpg" alt="Test")
+                    .thanks__picture
+                    .thanks__picture
+                li.glide__slide
+                  .thanks__picture-wrapper
+                    .thanks__picture
+                    .thanks__picture
+                    .thanks__picture
+    .glide__arrows
+      button.glide__btn.glide__prev(role="button" data-glide-control="<")
+      button.glide__btn.glide__next(role="button" data-glide-control=">")
+
+  .thanks__container.container
+    .thanks__btn
+      a.btn.btn--action(href="#!") Принять участие
+
+    .thanks__banner
+      .thanks__banner-text Узнать о страховании от рака
+      .thanks__banner-btn
+        a.btn(href="#!") Подробно
+
+  .thanks__line-bg.line-bg
+    .line-bg__wrapper

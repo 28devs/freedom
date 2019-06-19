@@ -1,0 +1,37 @@
+.safe
+  padding: 60px 0 @sm 80px 0 60px @md 80px 0 0 @xl 134px 0 0 0
+
+  &__item
+    margin-bottom: 25px
+    margin: @lg * 1px
+    &-wrapper
+      text-decoration: none
+      display: block
+      max-width: 285px
+      margin: 0 auto
+      &:hover
+        ^^&-picture
+          opacity: .7
+        ^^&-title
+          color: $main
+    &-picture
+      padding-bottom: 60.35%
+      background-color: #f3f3f3
+      background-image: svg-load("icons/img.svg")
+      background-size: 60px
+      background-position: center
+      background-repeat: no-repeat
+      margin-bottom: 15px @lg 24px
+      position: relative
+      overflow: hidden
+    &-img
+      display: block
+      width: 100%
+      @extend .absolute-0
+    &-title
+      text: #2e2e2e 19px 22px
+      font-weight: normal
+      margin-bottom: 7px @lg 10px
+    &-text
+      text: #636363 15px 22px
+      font-weight: normal

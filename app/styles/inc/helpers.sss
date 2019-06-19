@@ -1,0 +1,195 @@
+.simple-hover
+  outline: 0
+  cursor: pointer
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+  &:hover
+    opacity: .8
+  &:active
+    opacity: .6
+
+.socials
+  display: flex
+  &__link
+    size: 24px
+    background-size: contain @md auto 17px
+    display: block
+    background-position: center
+    background-repeat: no-repeat
+    @extend .simple-hover
+    &:not(:last-child)
+      margin-right: 18px @md 13px
+    &--facebook
+      @extend .icon-facebook
+    &--instagram
+      @extend .icon-instagram
+
+.absolute-0
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.line-bg
+  transform: skew(0deg, -10deg)
+  z-index: 4
+  @extend .absolute-0
+  &__wrapper
+    background-color: $main
+    background-image: linear-gradient(90deg, $gradient-from, $gradient-to)
+    z-index: 4
+    overflow: hidden
+    @extend .absolute-0
+    &:after
+      content: ""
+      position: absolute
+      top: -50%
+      bottom: -50%
+      left: 0
+      right: 0
+      background-image: url("../img/pattern-bg.png")
+      background-position: center
+      transform: skew(0deg, 10deg)
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    height: 70px @sm 80px @lg 90px @xl 110px
+    width: 53% @sm 42% @lg 32% @xl 29%
+    z-index: 2
+  &:before
+    background: #f27262
+    left: 0
+    top: 0
+    transform: translateY(-50%)
+    border-radius: 0 100px 100px 0
+    border-radius: 0 245px 100px 0
+  &:after
+    background: #4eb700
+    right: 0
+    bottom: 0
+    transform: translateY(50%)
+    border-radius: 100px 0 0 245px
+  &--style-1
+    &:before
+      z-index: 8
+      background-color: #017c0f
+      height: 50px @sm 60px
+    &:after
+      background-color: #f27262
+
+.title
+  text-align: center
+  margin-bottom: 55px @sm 75px
+  color: #000
+  font-size: 26px @sm 32px @lg 50px
+  position: relative
+  line-height: 1
+  &__text,
+  &__small
+    position: relative
+    z-index: 8
+  &__small
+    font-size: 60% @lg 50%
+    text-transform: uppercase
+    margin-bottom: 5px
+  &:before,
+  &:after
+    content: ""
+    height: 46px @lg 70px
+    max-width: 300px @lg 462px
+    width: 70%
+    margin: auto
+    @extend .absolute-0
+  &:before
+    background: #45b800
+    transform: skew(0, -10deg) translate(-10px, -10px)
+    z-index: 4
+  &:after
+    background: #f3f3f3
+    transform: skew(0, -10deg) translate(10px, 10px)
+    z-index: 3
+  &--style-colored
+    margin-bottom: 65px @sm 75px @lg 130px @xl 142px
+    font-size: @sm 36px
+    ^&__text
+      text-transform: uppercase
+    &:before
+      background-color: #f27262
+      transform: skew(0, -10deg) translate(1px, -3px)
+    &:after
+      background-color: #51b800
+      transform: skew(0, -10deg) translate(16px, 13px)
+  &--style-left
+    margin-bottom: 55px @sm 70px @lg 98px
+    ^&__text
+      font-size: 23px @sm 30px @lg 50px
+      text-transform: uppercase
+      max-width: 350px @sm 450px @lg 740px
+      margin: 0 auto
+    &:before
+      transform: skew(0, -10deg) translate(0px, -25px)
+    &:after
+      transform: skew(0, -10deg) translate(-15px, -8px)
+  &--style-white
+    margin-bottom: 30px @sm 50px @lg 72px
+    ^&__text
+      color: #fff
+      text-transform: uppercase
+      max-width: 330px @sm 380px @lg 550px
+      margin: 0 auto
+    &:before
+      background: #5abb00
+      transform: skew(0, -10deg) translate(15px, -18px)
+    &:after
+      display: none
+
+.list
+  &__item
+    display: flex
+    align-items: center
+    font-size: 17px @sm 18px
+    &:not(:last-child)
+      margin-bottom: 26px @sm 32px @lg 37px @xl 44px
+    &:before
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      color: #000
+      background-color: #fff
+      font-size: 26px @sm 27px @lg 40px
+      size: 40px @sm 50px @lg 55px
+      min-width: 40px @sm 50px @lg 55px
+      margin-right: 22px @sm 26px @lg 36px @xl 44px
+      border-radius: 50%
+      box-shadow: 0 0 0 7px #ebebeb @xl 0 0 0 11px #ebebeb
+    &:nth-child(1):before
+      content: "1"
+    &:nth-child(2):before
+      content: "2"
+    &:nth-child(3):before
+      content: "3"
+    &:nth-child(4):before
+      content: "4"
+    &-mark
+      color: $main
+  &--grid
+    display: @lg flex
+    flex-wrap: wrap
+    justify-content: @lg space-around
+    ^&__item
+      width: @lg 49%
+      align-items: flex-start
+      font-size: 15px
+      &-text
+        max-width: @lg 365px
+      &:not(:last-child)
+        margin-bottom: 22px @sm 28px @lg 40px @xl 52px
+      &:before
+        margin-top: 5px @sm 6px
+        size: 29px @sm 36px
+        min-width: 29px @sm 36px
+        font-size: 19px @sm 21px @lg 26px
+        margin-right: 17px @sm 21px @lg 23px
+        box-shadow: 0 0 0 5px #ebebeb @sm 0 0 0 7px #ebebeb

@@ -1,0 +1,61 @@
+.stats
+  padding: 50px 0 55px @sm 75px 0 85px @lg 50px 0 74px
+  margin-top: -230px @sm -200px
+  text-align: center @lg left
+  position: relative
+
+  &__container
+    position: relative
+    z-index: 8
+
+  &__heart
+    size: 173px
+    margin: 20px auto @lg 30px auto 30px @xl 38px auto 29px
+    background-image: url("../img/freedom-and-health-logo.png")
+    background-repeat: no-repeat
+    background-size: contain
+
+  &__amount
+    text: 42px #fff @sm 72px @lg 100px @xl 124px
+    line-height: @lg 1
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.4) @xl 0 7px 8px rgba(0, 0, 0, 0.45)
+    letter-spacing: 2px
+    &--usd
+      text-align: @lg right
+      margin-top: @xl 9px
+      margin-bottom: @xl -21px
+
+  &__mark
+    color: $accent
+    margin-left: 3px
+
+  &__men
+    display: inline-block
+    width: 19px @sm 30px @lg 42px @xl 52px
+    height: 100%
+    margin-left: 4px @sm 8px @xl 10px
+    background-image: url("../img/icons/men.png")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center 30%
+    filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.4)) @xl drop-shadow(0 8px 4px rgba(0, 0, 0, 0.45))
+    &:after
+      content: "O"
+      visibility: hidden
+
+  &__tip
+    text: 13px #fff uppercase @sm 17px @lg 20px
+    margin: 3px 0
+    text-align: @lg right
+    margin-top: @lg -25px
+    &--members
+      text-align: @lg left
+      margin-top: @lg 0 @xl -6px
+      margin-bottom: @lg -25px @xl -44px
+      padding-left: @lg 5px @xl 7px
+
+  &__text
+    text: 22px #fff uppercase @sm 34px
+    padding-left: @lg 63px @xl 90px
+    &-small
+      font-size: 80%

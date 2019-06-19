@@ -1,0 +1,107 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 95
+  // background: #fff
+
+  &__container
+    display: flex
+    align-items: center
+    padding: 10px * @lg 16px *
+    position: relative
+
+  &__wrapper
+    position: @lg-down absolute
+    z-index: 4
+    top: 0
+    right: 0
+    width: @lg-down 250px
+    background: @lg-down #fff
+    padding: @lg-down 67px 15px 20px 15px
+    box-shadow: @lg-down 0 3px 5px rgba(0, 0, 0, 0.05)
+    transform: @lg-down translateY(-7px)
+    visibility: @lg-down hidden
+    transition: transform $transition
+    width: @lg 100%
+    display: @lg flex
+    align-items: @lg center
+
+  &__logo
+    display: block
+    size: 194px 37px
+    min-width: 194px
+    margin-right: 37px
+    background-size: contain
+    @extend .icon-logo
+
+  &__nav
+    display: flex
+    flex-direction: @lg-down column
+    align-items: flex-end
+    margin-bottom: 30px @lg 0
+    &-link
+      font-size: 18px @lg 15px
+      color: #464646
+      text-decoration: none
+      margin-bottom: 18px @lg 0
+      @extend .simple-hover
+      &:not(:last-child)
+        margin-right: 0 @lg 18px @xl 32px
+
+  &__socials
+    margin-left: auto
+    margin-bottom: -45px @lg 0
+
+  &__phone
+    margin-left: 0 @lg 20px
+    display: flex @lg block
+    flex-direction: column
+    text-align: right
+    &-text
+      text: 17px $main
+      margin-right: 0 @lg 15px @xl 25px
+      margin-bottom: 5px @lg 0
+    &-number
+      text: 21px $main
+      text-decoration: none
+      @extend .simple-hover
+
+  &__burger
+    display: block @lg none
+    size: 26px 19px
+    box: vertical space-between
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
+    user-select: none
+    margin-left: auto
+    border: 0
+    background-color: transparent
+    outline: 0
+    padding: 0
+    position: relative
+    z-index: 7
+    &-line
+      size: 26px 3px
+      background: $main
+      transition: transform $transition
+
+.mobile-menu-is-open
+  .header__burger
+    &-line
+      &:nth-child(1)
+        transform: rotate(45deg) translate(4px, 4px)
+      &:nth-child(2)
+        width: 0
+      &:nth-child(3)
+        transform: rotate(-45deg) translate(7px, -7px)
+  .header__wrapper
+    transform: translateY(0)
+    visibility: visible
+
+
+.header-is-sticky
+  .header
+    background: #fff
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05)
